@@ -17,6 +17,12 @@ body {
     font-size: 1.2em;
 }
 
+/*
+====================
+ELEMENTS
+====================
+*/
+
 h1 {
   margin: 0;
   text-align: center;
@@ -57,20 +63,15 @@ img {
   margin: 0 auto;
 }
 
-.profile {
-  margin-bottom: 1em;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
-}
-
-/* Layout */
+/*
+====================
+LAYOUT
+====================
+*/
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 2em;
-}
-
-header {
-  background: #005E8C;
 }
 
 section {
@@ -78,55 +79,26 @@ section {
   padding: 0;
 }
 
+/* Header */
+header {
+  background: #005E8C;
+}
+
+/* Intro Section */
 #intro {
   background: #DCD6E0;
 }
 
-#plan {
-  background: #129057;
-  color: #fff;
-}
-
-#bring {
-  background: #DCD6E0;
-}
-
-#contact {
-
-}
-
-#contact h3 {
-  font-weight: 700;
-  letter-spacing: 0;
-}
-
-.card img {
-  margin: 1.5em auto 1em;
-  max-width: 480px;
+img.profile {
+  max-width: 600px;
+  margin-bottom: 1em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
 }
 
-.card h5, .card p {
-  margin: 0;
-  text-align: center;
-  font-size: 1rem;
-}
-
-#cta {
-  background: #DCD6E0;
-  text-align: center;
-}
-
-footer {
-  padding: 2em;
-  background: #005E8C;
-  text-align: center;
-}
-
-footer a:link, footer a:visited {
+/* Plan Section */
+#plan {
+  background: #129057;
   color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
 }
 
 /* Table */
@@ -134,29 +106,126 @@ table {
   padding: 1em 0;
   width: 100%;
 }
+  table th {
+    text-align: left;
+  }
+  th.date {
+    padding: 0.5em;
+    background: #FFAB1D;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  th.time {
+    font-weight: 600;
+  }
+  tr.key th {
+    padding-top: 1em;
+    font-weight: 600;
+  }
+  td {
+    padding: 0.5em;
+  }
 
-table th {
-  text-align: left;
+p.note {
+  margin-top: 0;
 }
 
-th.date {
-  padding: 0.5em;
-  background: #FFAB1D;
+.address {
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+  background: #23B16C;
   color: #fff;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
+}
+  .address h4, .address p {
+    margin: 0;
+  }
+  .address-group {
+    margin: 0.5em 0;
+  }
+  p.alert {
+    margin: 1em 0 0.5em;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+/* Bring Section */
+#bring {
+  background: #DCD6E0;
 }
 
-th.time {
-  font-weight: 600;
+/* Contact Section */
+#contact h3 {
+  font-weight: 700;
+  letter-spacing: 0;
 }
 
-tr.key th {
-  padding-top: 1em;
-  font-weight: 600;
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  .card img {
+    margin: 1.5em auto 1em;
+    max-width: 480px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+  }
+  .card h5, .card p {
+    margin: 0;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .card ul {
+    margin-top: 0.5em;
+  }
+    .card ul li {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+/* CTA Section */
+#cta {
+  background: #DCD6E0;
+  text-align: center;
 }
 
-td {
-  padding: 0.5em;
+/* Footer */
+footer {
+  padding: 2em;
+  background: #005E8C;
+  text-align: center;
+}
+  footer a:link, footer a:visited {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+
+/*
+====================
+MEDIA QUERIES
+====================
+*/
+@media(min-width: 700px) {
+
+  img.profile {
+    margin-bottom: 2em;
+  }
+
+  #location img {
+    margin-top: 2em;
+  }
+
+  .team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+  }
+    hr.hide {
+      display: none;
+    }
+
 }
